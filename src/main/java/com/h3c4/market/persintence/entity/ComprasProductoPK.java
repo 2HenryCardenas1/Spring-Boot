@@ -5,6 +5,7 @@ import jakarta.persistence.Embeddable;
 
 import java.io.Serializable;
 
+
 @Embeddable
 public class ComprasProductoPK implements Serializable {
     @Column(name = "id_compra")
@@ -29,4 +30,5 @@ public class ComprasProductoPK implements Serializable {
     public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
+
 }
