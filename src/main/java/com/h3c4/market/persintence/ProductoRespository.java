@@ -5,6 +5,7 @@ import com.h3c4.market.domain.repository.ProductRespository;
 import com.h3c4.market.persintence.crud.ProductCrudRepository;
 import com.h3c4.market.persintence.entity.Producto;
 import com.h3c4.market.persintence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,9 +16,12 @@ import java.util.Optional;
 @Repository
 public class ProductoRespository implements ProductRespository {
 
+    @Autowired
     private ProductCrudRepository productCrudRepository;
-
+    @Autowired
     private ProductMapper mapper;
+
+
     @Override
     public List<Product> getAll(){
         //hace la consulta a la bd y la guarda en una lista de productos
